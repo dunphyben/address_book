@@ -31,7 +31,7 @@ class ContactsController < ApplicationController
   end
 
   def update
-    @contact = Contact.fins(params[:id])
+    @contact = Contact.find(params[:id])
     if @contact.update(:name => params[:name],
                           :phone => params[:phone],
                           :email => params[:email])
